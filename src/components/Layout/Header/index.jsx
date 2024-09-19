@@ -2,8 +2,10 @@ import Logo from './Logo';
 import Container from '@mui/material/Container';
 import PropTypes from 'prop-types';
 
-function Header({ title = 'Header' }) {
-  return (<Container>{Logo && <Logo />}{title}</Container>);
+const styles = { backgroundColor: 'red', width: '100%', height: '100%' };
+
+function Header({ title }) {
+  return (<Container sx={styles}>{Logo && <Logo />}{title}</Container>);
 }
 
 Header.propTypes = {

@@ -1,8 +1,11 @@
 import { RouterProvider } from "react-router-dom";
+import { ThemeProvider } from '@mui/material/styles';
 import router from './routes/Router';
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import theme from './theme';
+// import reactLogo from './assets/react.svg'
+// import viteLogo from '/vite.svg'
+
+// import './App.css'
 
 function App() {
   // return (
@@ -26,7 +29,11 @@ function App() {
   //     </p>
   //   </>
   // );
-  return <RouterProvider router={router} />
+  return (
+    <ThemeProvider theme={theme}>
+      <RouterProvider router={router} />
+    </ThemeProvider>
+  );
 }
 
 export default App;
